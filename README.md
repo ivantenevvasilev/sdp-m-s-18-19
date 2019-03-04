@@ -5,6 +5,6 @@
 
 | Седмица  |       Условиe      | Примерни решения | Решения от час |
 | :------- | ------------------ | ---------------- | -------------- |
-| 3        | [Български](http://www.google.com)  [English](http://www.google.com) | TBA              | TBA            |
+| 3        | [Български](https://github.com/ivantenevvasilev/sdp-m-s-18-19/blob/master/03-exercise/README.md)  [English](https://github.com/ivantenevvasilev/sdp-m-s-18-19/blob/master/03-exercise/EN.md) | TBA              | TBA            |
 
 Ще се опитваме да предоставяме решенията показани в час, примерни решения подготвени предварително в случай че не достигне време за решаване на всички задачи в час
