@@ -96,6 +96,7 @@ Sample output for the function `sort_rooms_by_size`
 |4 <br> 0 20 20 20 15.10 <br> 0 50 50 20 21.50 <br> 23 43 62 12 55.73 <br> 4 20 25 10 10|Room #4 has dimensions (20, 25, 10) and volume 5000 is available for $10 per day<br>Room #0 has dimensions (20, 20, 20) and volume 8000 is available for $15.1 per day<br>Room #23 has dimensions (43, 62, 12) and volume 31992 is available for $55.73 per day<br>Room #0 has dimensions (50, 50, 20) and volume 50000 is available for $21.5 per day|
 
 Sample output for the function `sort_rooms_by_price`
+
 |
        Input      | Output (sorted by price, ascending) |
 | --------------- | ---------------------------------- |
