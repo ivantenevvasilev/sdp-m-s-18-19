@@ -90,12 +90,14 @@ int main() {
 ```
 
 Sample output for the function `sort_rooms_by_size`
+
 |       Input      | Output (sorted by size, ascending) |
 | --------------- | ---------------------------------- |
 |4 <br> 0 20 20 20 15.10 <br> 0 50 50 20 21.50 <br> 23 43 62 12 55.73 <br> 4 20 25 10 10|Room #4 has dimensions (20, 25, 10) and volume 5000 is available for $10 per day<br>Room #0 has dimensions (20, 20, 20) and volume 8000 is available for $15.1 per day<br>Room #23 has dimensions (43, 62, 12) and volume 31992 is available for $55.73 per day<br>Room #0 has dimensions (50, 50, 20) and volume 50000 is available for $21.5 per day|
 
 Sample output for the function `sort_rooms_by_price`
-|       Input      | Output (sorted by price, ascending) |
+|
+       Input      | Output (sorted by price, ascending) |
 | --------------- | ---------------------------------- |
 |4 <br> 0 20 20 20 15.10 <br> 0 50 50 20 21.50 <br> 23 43 62 12 55.73 <br> 4 20 25 10 10 | Room #4 has dimensions (20, 25, 10) and volume 5000 is available for $10 per day <br>Room #0 has dimensions (20, 20, 20) and volume 8000 is available for $15.1 per day <br>Room #0 has dimensions (50, 50, 20) and volume 50000 is available for $21.5 per day<br>Room #23 has dimensions (43, 62, 12) and volume 31992 is available for $55.73 per day|
 
@@ -140,6 +142,7 @@ Implement a function that given an array of rooms, sums their prices.
 double sum_prices_for_rooms(Room * rooms, int count);
 ```
 Sample output for the function `sum_prices_for_rooms`
+
 |       Input                                                                            | Result |
 | -------------------------------------------------------------------------------------- | -------- |
 |4 <br> 0 20 20 20 15.10 <br> 0 50 50 20 21.50 <br> 23 43 62 12 55.73 <br> 4 20 25 10 10 |  102.33  |
@@ -153,6 +156,7 @@ Where in the case of finding a room with the same room number, it gets removed f
 In the case that a room with the number that is to be searched is not present in the array, the function should return false and not modify the array. We need this because when removing an element from the array, the array "changes" its size, but if there isn't an element to be removed, ther size does not change. This will be our way of indicating whether or not the array has shrunk.
 
 **Example**:
+
 |       Input                                                                                                   | State of the array after execution                 | Returned value | Description                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | room_number: 0 <br> room_count: 1 <br> rooms: [(0 20 20 20 15.10)]                                           | rooms: []                                            |      true       | Room #0 is found in the array and is removed from it, leaving it empty. Function returns true, because an element has been removed.                |
