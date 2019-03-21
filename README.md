@@ -5,7 +5,7 @@
 
 | Седмица  |       Условиe      | Примерни решения | Решения от час |
 | :------- | ------------------ | ---------------- | -------------- |
-| 3        | [Български](https://github.com/ivantenevvasilev/sdp-m-s-18-19/blob/master/03-exercise/README.md)  [English](https://github.com/ivantenevvasilev/sdp-m-s-18-19/blob/master/03-exercise/EN.md) | [Решение](https://github.com/ivantenevvasilev/sdp-m-s-18-19/tree/master/03-exercise/sample-solutions)              | [Примери](https://github.com/ivantenevvasilev/sdp-m-s-18-19/blob/master/03-exercise/examples/counter-example.cpp)            |
-| 4        | [Задачи](https://github.com/ivantenevvasilev/sdp-m-s-18-19/tree/master/04-stack)     |                  |                |
+| 3        | [Български](03-classes/README.md)  [English](03-classes/EN.md) | [Решение](03-classes/sample-solutions) | [Примери](03-classes/examples/counter-example.cpp) |
+| 4        | [Задачи](04-classes-2/README.md) |    |                |
 
 Ще се опитваме да предоставяме решенията показани в час, примерни решения подготвени предварително в случай че не достигне време за решаване на всички задачи в час
