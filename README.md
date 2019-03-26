@@ -7,7 +7,7 @@
 
 | № | Условие | Краен срок |
 | :- | ------- | ---------- |
-| 1 | [undo-redo](homeworks/01-undo-redo/REAME.md) | |
+| 1 | [undo-redo](homeworks/01-undo-redo/README.md) | |
 
 ## Упражнения
 
