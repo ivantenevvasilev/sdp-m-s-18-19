@@ -5,9 +5,9 @@
 
 ## Домашни
 
-| № | Условие | Краен срок |
-| :- | ------- | ---------- |
-| 1 | [undo-redo](homeworks/01-undo-redo/README.md) | |
+| № | Условие | Краен срок |  Предаване |
+| :- | ------- | ---------- | ---------  |
+| 1 | [undo-redo](homeworks/01-undo-redo/README.md) | 23:45 10.04.2019 | [Тук](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=119423) |
 
 ## Упражнения
 
