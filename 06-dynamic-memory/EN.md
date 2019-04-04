@@ -49,7 +49,7 @@ Everything looks okay, but when we want to delete the object `a` (meaning the fu
 
 Meaning we lose the pointer to the dynamically allocated array, and it remains allocated. We have to make sure that it is deleted before we destroy the pointer to it. For that reason we have to implement our own destructor.
 
-### Copy Constructor
+### The Copy Constructor
 What would happen in the following line (given the default impementation of the copy constructor)?
 
 ```c++
@@ -72,7 +72,7 @@ char c = a.at(3);
 c == 'd' // returns false because b changed a
 ```
 
-### Copy assignment operator
+### The Copy Assignment Operator
 For the copy assignment operator to be called, we have to have two objects that have memory allocated for them.
 
 Meaning something of the lines of
