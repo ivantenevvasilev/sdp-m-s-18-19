@@ -47,13 +47,13 @@
 член-данни:
  - `id`: естествено число [< 2³²](https://en.cppreference.com/w/cpp/language/types) – уникално е за всеки отделен обект, тоест няма два различни обекта с еднаво `id`.
  - `pricePerGB`: реално число – цената за всеки гигабайт.
- - `gigabytes`: естествено число [< 2³²](https://en.cppreference.com/w/cpp/language/types) – брой гигабайт които даден `StorageUnit` поддържа.
+ - `gigabytes`: естествено число [< 2³²](https://en.cppreference.com/w/cpp/language/types) – брой гигабайти, които даден `StorageUnit` поддържа.
  - `owner`: указател към обекти от тип `Company` – самият собственик на StorageUnit-а, а ако няма собственик тази член-данна има стойност `nullptr`.
 
 член-функции:
  - за да може да се правят масиви от този тип е нужно да се дефинира и конструктор по подразбиране.
 
-Цената на един обект от тип `StorageUnit` е `pricePerGB * gigabytes`.
+> Цената на един обект от тип `StorageUnit` е `pricePerGB * gigabytes`.
 
 ### 3. `Company`
 член-данни:
