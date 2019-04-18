@@ -7,7 +7,8 @@
 
 | № | Задание | Краен срок | Условие |
 | :- | ------- | ---------- | - |
-| 1 | [undo-redo](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=119423) | 23:45 12.04.2019 | [README](homeworks/01-undo-redo/README.md) |
+| 1 | [undo-redo](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=119423) | 23:45 12.04.2019 | [Условие](homeworks/01-undo-redo) |
+| 2 | [Data Center part one] | 23:45 25.04.2019 | [Условие](homeworks/02-data-center-part-one) |
 
 ## Упражнения
 
