@@ -68,5 +68,5 @@
  - `clients`: `DynamicArray<Company>`
 
 член-функции:
- - `void rentStorageTo(const Company& company)` – дава назаем на компанията `company` един свободен (без собственик) `StorageUnit` от `storage`. Ако `company` я няма в масива `clients`, я добавя в него.
+ - `void lendStorageTo(const Company& company)` – дава назаем на компанията `company` един свободен (без собственик) `StorageUnit` от `storage`. Ако `company` я няма в масива `clients`, я добавя в него.
  - `void taxClients()` – взима от парите на всяка клиентска компания 10% от цената на всеки `StorageUnit`, който е нейн и го добавя към бюджета на центъра за данни.
