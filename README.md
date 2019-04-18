@@ -13,11 +13,11 @@
 
 | Седмица | Тема | Примерни решения | Решения от час |
 | :------ | ---- | ---------------- | -------------- |
-| 3       | [Класове](03-classes/README.md)  [English](03-classes/EN.md) | [Решение](03-classes/sample-solutions) | [Примери](03-classes/examples/counter-example.cpp) |
-| 4       | [Класове 2](04-classes-2/README.md)  [English](04-classes-2/EN.md) |  |              |
-| 5       | [Стек](05-stack/README.md)  [English](05-stack/EN.md) | [Решение](05-stack/sample-solutions)  |  |
-| 6       | [Динамична Памет](06-dynamic-memory/README.md)        |   |   |   |
-| 7       | [Динамична Памет 2](07-dynamic-memory-2/README.md)        |   |   |   |
+| 3       | [Класове](03-classes)  [English](03-classes/EN.md) | [Решение](03-classes/sample-solutions) | [Примери](03-classes/examples/counter-example.cpp) |
+| 4       | [Класове 2](04-classes-2)  [English](04-classes-2/EN.md) |  |              |
+| 5       | [Стек](05-stack)  [English](05-stack/EN.md) | [Решение](05-stack/sample-solutions)  |  |
+| 6       | [Динамична Памет](06-dynamic-memory)        |   |   |   |
+| 7       | [Динамична Памет 2](07-dynamic-memory-2)        |   |   |   |
 | 8       | Преговор / Подготовка за контролно | | | |
 | 9       | [Шаблони](09-templates) | | | |
 
