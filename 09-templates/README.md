@@ -55,7 +55,7 @@ double sum(double a, double b) {
 
 Примерно една конкретна инстанция би изглеждала така
 ```c++
-bool contains_more_than_once(Company * array, int count, int n);
+bool contains_more_than_once(Company * array, int count, Company element);
 ```
 
 ## Шаблонни класове
