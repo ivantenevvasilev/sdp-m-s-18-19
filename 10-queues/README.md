@@ -8,11 +8,13 @@
 
 ```c++
 class Queue {
+... други неща ...
   void push(const T& x);
   void pop(T& x);
   void head(T& x) const;
   bool empty() const;
-} 
+... други неща ...
+};
 ```
 
 ## Задача 2
