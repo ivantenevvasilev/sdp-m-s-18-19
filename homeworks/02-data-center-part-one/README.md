@@ -61,8 +61,9 @@
 
 ### 3. `Company` – компания, която има интересите да си закупи хранилищно пространство.
 член-данни:
+ - `name`: низ – името на компанията, уникално за всяка отделна компания.
  - `budget`: реално число – парите, с които компанията разполага.
- - `rentedStorage`: `DynamicArray<StorageUnit*>` – `StorageUnit`-ити, които компанията е наела.
+ - `rentedStorage`: `DynamicArray<StorageUnit*>` – `StorageUnit`-ити, които компанията е наела, тоест има достъп до тях.
 
 член-функции:
  - за да може да се правят масиви от този тип е нужно да се дефинира и конструктор по подразбиране.
@@ -74,6 +75,6 @@
  - `clients`: `DynamicArray<Company>`
 
 член-функции:
- - `void lendStorageTo(const Company& company)` – дава назаем на компанията `company` един свободен (без собственик) `StorageUnit` от `storage`. Ако `company` я няма в масива `clients`, я добавя в него.
+ - `void lendStorageTo(const Company& company)` – дава достъп на компанията `company` до един свободен (без собственик) `StorageUnit` от `storage`. Това не променя `storage`. Ако `company` я няма в масива `clients`, я добавя в него.
  - `void taxClients()` – взима от парите на всяка клиентска компания 10% от цената на всеки неин `StorageUnit` и ги добавя към бюджета на центъра за данни.
- - `void upgradeStorage(const DynamicArray<StorageUnit>& disks)` – добавя всички `disks` към `storage`.
+ - `void upgradeStorage(const DynamicArray<StorageUnit>& disks)` – добавя всички елементи от масива `disks` в масива `storage`.
