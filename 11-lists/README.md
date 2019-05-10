@@ -53,7 +53,7 @@ struct Node {
 Да се напише функция която замества елемнтът на `n`-та позиция в списък.
 
 ```c++
-void replace(Node<T>*& start, int n, T item);
+void replace(Node<T>* start, int n, T item);
 ```
 
 #### Пример
