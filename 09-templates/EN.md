@@ -108,6 +108,7 @@ public:
 Where `S` is the size of the tuple, for example when S = 2, the class would be a pair (x, y) from type T.
 
 Where the function has the following behaviour
+
 |   Function |                          Type                                              | Return Value |
 | :-----------: | :----------------------------------------------------------------------:  | ---------------- |
 |   operator==  | :heavy_check_mark: Binary </br> :heavy_check_mark: Infix | Returns if the tuples are equal element by element | 
