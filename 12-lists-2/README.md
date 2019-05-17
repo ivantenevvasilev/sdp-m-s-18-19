@@ -11,7 +11,7 @@
 
 ```c++
 template <typename T>
-bool is_arithmetic_progression(const List<T>& list);
+bool is_arithmetic_progression(List<T>& list);
 // или
 // bool is_arithmetic_progression(Node<T> * start);
 ```
@@ -22,7 +22,7 @@ bool is_arithmetic_progression(const List<T>& list);
 
 ```c++
 template <typename T>
-bool is_geometric_progression(const List<T>& list);
+bool is_geometric_progression(List<T>& list);
 // или
 // bool is_geometric_progression(Node<T> * start);
 ```
