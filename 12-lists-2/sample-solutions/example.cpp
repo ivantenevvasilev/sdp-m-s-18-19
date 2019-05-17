@@ -241,6 +241,32 @@ bool is_arithmetic_progression(List<T>& list) {
      return true;
   }
   
+  T differance = second->item - first->item;
+
+  while(second != NULL) {
+    if (second->item - first->item != differance) { 
+       return false;
+    }
+    first = second;
+    second = list.iter();
+  }
+
+  return true;
+}
+
+// Задача 2
+template <typename T>
+bool is_geometric_progression(List<T>& list) {
+  list.iterStart(); // Позиционираме указателят current в началото
+  Node<T> * first = list.iter();
+  if (first == NULL) {
+     return true;
+  }
+  Node<T> * second = list.iter();
+  if (second == NULL) {
+     return true;
+  }
+  
   T differance = second->item / first->item;
 
   while(second != NULL) {
@@ -254,8 +280,9 @@ bool is_arithmetic_progression(List<T>& list) {
   return true;
 }
 
+// Задача 3
 template <typename T>
-List<T> generate_arithmetic_progression(int n, int d, T a) {
+List<T> generate_arithmetic_progression(int n, T d, T a) {
   List<T> list;
   if (n == 0) {
     return list;
@@ -266,15 +293,68 @@ List<T> generate_arithmetic_progression(int n, int d, T a) {
   }
   return list;
 }
+// Задача 4
+template <typename T>
+List<T> generate_geometric_progression(int n, T q, T a) {
+  List<T> list;
+  if (n == 0) {
+    return list;
+  }
+  for (int i = 0; i < n; ++i) {
+    list.toEnd(a);
+    a *= q;
+  }
+  return list;
+}
+
+// Задача 5
+template <typename T>
+List<T> merge_lists(List<T>& left, List<T>& right) {
+  List<T> result;
+  
+  left.iterStart();
+  right.iterStart();
+
+  Node<T> * left_ptr = left.iter();
+  Node<T> * right_ptr = right.iter();
+
+  // Взимаме по-малкият елемент и местим съответният указател
+  while (left_ptr != NULL && right_ptr != NULL) {
+      if (left_ptr->item < right_ptr->item) {
+          result.toEnd(left_ptr->item); 
+          left_ptr = left.iter();
+      }
+      else {
+          result.toEnd(right_ptr->item);
+          right_ptr = right.iter();
+      }
+  }
+  // На този етап знаем че поне един от двата списъка е свършил
+  // Обаче кое от двете - не знаем
+  // За това пробваме и двете
+  while (left_ptr != NULL) {
+     result.toEnd(left_ptr->item);
+     left_ptr = left.iter();
+  }
+  while (right_ptr != NULL) {
+     result.toEnd(right_ptr->item);
+     right_ptr = right.iter();
+  }
+  return result;
+}
 
 int main() {
   List<double> list;
   list.toEnd(1);
   list.toEnd(3);
   list.toEnd(9);
-  
 
-  List<int> a = generate_arithmetic_progression(100, 5, 1); 
+
+  List<double> a = generate_arithmetic_progression(5, 5.0, 1.0); 
+  
+  list.print();
+  cout << "\n";
   a.print();
+  cout << "\n";
   return 0;
 }

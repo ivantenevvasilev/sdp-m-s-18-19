@@ -30,25 +30,25 @@ bool is_geometric_progression(List<T>& list);
 ### Задача 3
 Да се напише функция която приема:
 - брой `n`
-- число `d`
+- разлика `d`
 - начална стойност `a`
 Функцията се иска да генерира свързан списък, който има първите `n` на брой числа от аритметичната прогресия започваща с стойност `a` и разлика `d`
 
 ```c++
 template <typename T>
-List<T> generate_arithmetic_progression(int n, int d, T a);
+List<T> generate_arithmetic_progression(int n, T d, T a);
 ```
 
 ### Задача 4
 Да се напише функция която приема:
 - брой `n`
-- число `q`
+- частно `q`
 - начална стойност `b`
 Функцията се иска да генерира свързан списък, който има първите `n` на брой числа от геометрична прогресия започваща с стойност `b` и частно `q`
 
 ```c++
 template <typename T>
-List<T> generate_geometric_progression(int n, int q, T b);
+List<T> generate_geometric_progression(int n, T q, T b);
 ```
 
 ### Задача 5
