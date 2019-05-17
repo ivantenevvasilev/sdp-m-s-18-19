@@ -36,7 +36,7 @@ bool is_geometric_progression(List<T>& list);
 
 ```c++
 template <typename T>
-List<T> generate_arithmetic_progression(int n, int d, int a);
+List<T> generate_arithmetic_progression(int n, int d, T a);
 ```
 
 ### Задача 4
@@ -48,7 +48,7 @@ List<T> generate_arithmetic_progression(int n, int d, int a);
 
 ```c++
 template <typename T>
-List<T> generate_geometric_progression(int n, int q, int b);
+List<T> generate_geometric_progression(int n, int q, T b);
 ```
 
 ### Задача 5
