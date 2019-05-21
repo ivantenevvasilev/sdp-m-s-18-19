@@ -1,7 +1,8 @@
 struct Order {
 	int numberOfStorageUnits;
 	Company company;
-
+  
+	Order () = default;
 	Order (int numberOfStorageUnits, const Company& company)
 			: company(company), numberOfStorageUnits(numberOfStorageUnits) {}
 };
@@ -10,7 +11,7 @@ struct SimulationResult {
 	char status; // 's' == success, 'f' == failure
 	unsigned int totalDays;
 	double finalBudget;
-	std::queue<Order> unfinishedOrders;
+	Queue<Order> unfinishedOrders;
 };
 
 const int STORAGE_UNITS_COUNT = 1024;
@@ -21,11 +22,11 @@ class Simulation {
 	StorageUnit storageUnits[STORAGE_UNITS_COUNT];
 
 public:
-	std::queue<Order> getSampleOrders1();
-	std::queue<Order> getSampleOrders2();
-	std::queue<Order> getSampleOrders3();
+	Queue<Order> getSampleOrders1();
+	Queue<Order> getSampleOrders2();
+	Queue<Order> getSampleOrders3();
 
 	void prepare();
 	// трябва да го имплементирате
-	SimulationResult simulate (std::queue<Order> orders, int storageUnitsPerUpgrade, int minutesPerStorageUnit);
+	SimulationResult simulate (Queue<Order> orders, int storageUnitsPerUpgrade, int minutesPerStorageUnit);
 };

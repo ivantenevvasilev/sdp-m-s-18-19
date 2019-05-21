@@ -18,8 +18,8 @@ void Simulation::prepare () {
 	dataCenter = DataCenter(30312);
 }
 
-std::queue<Order> Simulation::getSampleOrders1 () {
-	std::queue<Order> result;
+Queue<Order> Simulation::getSampleOrders1 () {
+	Queue<Order> result;
 
 	for (int i = 0; i < 10; ++i) {
 		int j = i + 90;
@@ -29,8 +29,8 @@ std::queue<Order> Simulation::getSampleOrders1 () {
 	return result;
 }
 
-std::queue<Order> Simulation::getSampleOrders2 () {
-	std::queue<Order> result;
+Queue<Order> Simulation::getSampleOrders2 () {
+	Queue<Order> result;
 
 	for (int i = 0; i < 10; ++i) {
 		int j = i + 90;
@@ -40,8 +40,8 @@ std::queue<Order> Simulation::getSampleOrders2 () {
 	return result;
 }
 
-std::queue<Order> Simulation::getSampleOrders3 () {
-	std::queue<Order> result;
+Queue<Order> Simulation::getSampleOrders3 () {
+	Queue<Order> result;
 
 	result.push(Order(8, companies[1]));
 	result.push(Order(68, companies[2]));

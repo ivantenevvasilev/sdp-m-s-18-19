@@ -8,10 +8,12 @@ void printResult(SimulationResult result) {
 	if (result.status == 'f') {
 		std::cout << "unfinished orders: " << std::endl;
 		while (!result.unfinishedOrders.empty()) {
-			std::cout << "    Company: " << result.unfinishedOrders.front().company.getName()
-			          << ", requested units: " << result.unfinishedOrders.front().numberOfStorageUnits << std::endl;
+			Order order;
+			result.unfinishedOrders.pop(order);
 
-			result.unfinishedOrders.pop();
+			std::cout << "    Company: " << order.company.getName()
+			          << ", requested units: " << order.numberOfStorageUnits << std::endl;
+
 		}
 	}
 }
