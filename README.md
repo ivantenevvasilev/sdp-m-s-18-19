@@ -9,6 +9,7 @@
 | :- | ------- | ---------- | - |
 | 1 | [undo-redo](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=119423) | 23:45 12.04.2019 | [Условие](homeworks/01-undo-redo) |
 | 2 | [Data Center, част първа](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=120550) | 23:45 04.05.2019 | [Условие](homeworks/02-data-center-part-one) |
+| 3 | [Data Center, част втора](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=121622) | 23:45 02.06.2019 | |
 
 ## Упражнения
 
