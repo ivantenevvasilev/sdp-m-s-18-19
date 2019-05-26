@@ -1,10 +1,10 @@
+#ifndef DEFINE_DLIST_SUCCESS
+#define DEFINE_DLIST_SUCCESS
+
 #include <cassert>
 #include <iostream>
 
 using namespace std;
-
-#ifndef DEFINE_DLIST_SUCCESS
-#define DEFINE_DLIST_SUCCESS
 
 template<class T>
 struct DNode {
@@ -14,37 +14,39 @@ struct DNode {
 };
 
 template <typename T = int>
-class DLList
-{ public:
+class DLList {
+public:
 // канонично представяне
-DLList();
-~DLList();
-DLList(const DLList&);
-DLList& operator=(const DLList&);
-// основни функции
-bool empty() const;
-void iterStart(DNode<T>* = NULL);
-void iterEnd (DNode<T>* = NULL);
-DNode<T>* iterSucc();
-DNode<T>* iterPred();;
-void toEnd(const T&);
-void toStart(const T&);
-void deleteElem(DNode<T>*, T&);
-void print() const;
-void print_reverse() const;
-int length() const;
+	DLList();
+	~DLList();
+	DLList(const DLList&);
+	DLList& operator=(const DLList&);
+
+	DLList(const T* array, int size);
+	// основни функции
+	bool empty() const;
+	void iterStart(DNode<T>* = NULL);
+	void iterEnd (DNode<T>* = NULL);
+	DNode<T>* iterSucc();
+	DNode<T>* iterPred();;
+	void toEnd(const T&);
+	void toStart(const T&);
+	void deleteElem(DNode<T>*, T&);
+	void print() const;
+	void print_reverse() const;
+	int length() const;
 private:
-DNode<T> *start,
-// указател към началото
-*end,
-// указател към края
-*currentS,
-// итератор към началото
-*currentE;
-// итератор към края
-// помощни член-функции
-void copyList(const DLList&);
-void deleteList();
+	DNode<T> *start,
+	// указател към началото
+	*end,
+	// указател към края
+	*currentS,
+	// итератор към началото
+	*currentE;
+	// итератор към края
+	// помощни член-функции
+	void copyList(const DLList&);
+	void deleteList();
 };
 
 template <typename T>
@@ -128,58 +130,63 @@ return p;
 }
 
 template <typename T>
-void DLList<T>::toEnd(const T& x)
-{ DNode<T>* p = end;
-end = new DNode<T>;
-assert(end != NULL);
-end->item = x;
-end->next = NULL;
-if (p) p->next = end;
-else start = end;
-end->previous = p;
+void DLList<T>::toEnd(const T& x) {
+	DNode<T>* p = end;
+	end = new DNode<T>;
+	assert(end != NULL);
+	end->item = x;
+	end->next = NULL;
+
+	if (p) p->next = end;
+	else start = end;
+
+	end->previous = p;
 }
 
 template <typename T>
-void DLList<T>::toStart(const T& x)
-{ DNode<T>* p = start;
-start = new DNode<T>;
-assert(start != NULL);
-start->item = x;
-start->previous = NULL;
-if (p) p->previous = start;
-else end = start;
-start->next = p;
-}
+void DLList<T>::toStart(const T& x) {
+	DNode<T>* p = start;
+	start = new DNode<T>;
+	assert(start != NULL);
+	start->item = x;
+	start->previous = NULL;
 
+	if (p) p->previous = start;
+	else end = start;
 
-template <typename T>
-void DLList<T>::deleteElem(DNode<T>* p, T& x)
-{ x = p->item;
-if (start == end) start = end = NULL;
-else
-if (p == start)
-{ start = start->next;
-start->previous = NULL;
-}else
-if (p == end)
-{ end = p->previous;
-end->next = NULL;
-}
-else
-{ p->previous->next = p->next;
-p->next->previous = p->previous;
-}
-delete p;
+	start->next = p;
 }
 
 template <typename T>
-void DLList<T>::print() const
-{ DNode<T>* p = start;
-while (p)
-{ cout << p->item << " ";
-p = p->next;
+void DLList<T>::deleteElem(DNode<T>* p, T& x) {
+	x = p->item;
+
+	if (start == end) {
+		start = end = NULL;
+	} else if (p == start) {
+		start = start->next;
+		start->previous = NULL;
+	} else if (p == end) {
+		end = p->previous;
+		end->next = NULL;
+	} else {
+		p->previous->next = p->next;
+		p->next->previous = p->previous;
+	}
+	delete p;
 }
-cout << endl;
+
+template <typename T>
+void DLList<T>::print() const {
+	DNode<T>* p = start;
+	cout << '[';
+	while (p && p->next != NULL) {
+		cout << p->item << ", ";
+		p = p->next;
+	}
+	cout << p->item;
+	cout << ']';
+	cout << endl;
 }
 
 template <typename T>
@@ -201,6 +208,14 @@ while (p)
 p = p->next;
 }
 return n;
+}
+
+template <typename T>
+DLList<T>::DLList (const T* array, int size)
+		: DLList() {
+	for (int i = 0; i < size; ++i) {
+		toEnd(array[i]);
+	}
 }
 
 #endif
