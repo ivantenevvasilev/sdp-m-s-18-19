@@ -16,12 +16,13 @@
 | Седмица | Тема | Примерни решения | Решения от час |
 | :------ | ---- | ---------------- | -------------- |
 | 3       | [Класове](03-classes) | [Решение](03-classes/sample-solutions) | [Примери](03-classes/examples/counter-example.cpp) |
-| 4       | [Класове 2](04-classes-2) |  |              |
-| 5       | [Стек](05-stack) | [Решение](05-stack/sample-solutions)  |  |
-| 6       | [Динамична Памет](06-dynamic-memory)        |   |   |   |
-| 7       | [Динамична Памет 2](07-dynamic-memory-2)        |   |   |   |
-| 8       | Преговор / Подготовка за контролно | | | |
-| 9       | [Шаблони](09-templates) | | | |
-| 10      | [Опашка](10-queues) | | | |
-| 11      | [Свързани Списъци](11-lists) | | [Примери](11-lists/sample-solutions/main.cpp) | |
-| 12      | [Свързани Списъци 2](12-lists-2) | |  | |
+| 4       | [Класове 2](04-classes-2) | | |
+| 5       | [Стек](05-stack) | [Решение](05-stack/sample-solutions) | |
+| 6       | [Динамична Памет](06-dynamic-memory) | | |
+| 7       | [Динамична Памет 2](07-dynamic-memory-2) | | |
+| 8       | Преговор / Подготовка за контролно | | |
+| 9       | [Шаблони](09-templates) | | |
+| 10      | [Опашка](10-queues) | | |
+| 11      | [Свързани Списъци](11-lists) | | [Примери](11-lists/sample-solutions/main.cpp) |
+| 12      | [Свързани Списъци 2](12-lists-2) | | | [Примери](12-lists-2/sample-solutions/example.cpp) |
+| 13      | [Подготовка за контролно 2](13-exam-preparation) | | [Примери](13-exam-preparation/sample-solutions) |
