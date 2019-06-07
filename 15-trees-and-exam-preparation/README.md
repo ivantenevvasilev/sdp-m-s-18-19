@@ -13,7 +13,7 @@ template <class T>
 class BinarySearchTree {
 public:
   BinarySearchTree();
-  BinarySearchTree(const BinarySearchTree<T>& left, const BinarySearchTree<T>& right, root);
+  BinarySearchTree(const BinarySearchTree<T>& left, const BinarySearchTree<T>& right, T root);
 
   BinarySearchTree(const BinarySearchTree<T>& other);
   BinarySearchTree& operator=(const BinarySearchTree<T>& other);
