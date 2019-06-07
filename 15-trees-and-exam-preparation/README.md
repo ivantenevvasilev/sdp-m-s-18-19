@@ -39,7 +39,7 @@ private:
 
 ```c++
 template <class T>
-List<T> root_left_right(BinaryTree<T>& tree); 
+List<T> root_left_right(BinarySearchTree<T>& tree); 
 ```
 
 ### Задача 4
