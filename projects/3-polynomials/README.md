@@ -2,8 +2,8 @@
 
 ![Polinomial](images/polynomial.png)
 
-Тук ще искаме да моделираме полином с целочислени коефициенти или рационални коефициенти.
-Нашият модел ще е сравнително прост. Ползвайки класът `DynamicArray` ще реализираме клас `Polynomial` който има следните функционалности
+Тук ще искаме да моделираме полином с целочислени, рационални коефициенти или над какъвто и да е пръстен. Затова ще си направим шаблонен клас.
+Нашият модел ще е сравнително прост. Ползвайки класът `DynamicArray`, който реализира автоматично-преоразмеряващ се динамичен масив, ще реализираме клас `Polynomial` който има следните функционалности
 
 ```c++
 template <class T = int>
@@ -15,8 +15,10 @@ public:
   Polynomial<T> operator+(const Polynomial<T>& other) const;
   Polynomial<T> operator-(const Polynomial<T>& other) const;
 
+  Polynomial<T> operator*(const Polynomial<T>& other) const;
+
   Point calculate_point(int x);
-  DynamicArray<Point> generate_points(int x_start, int x_end, T distance);
+  DynamicArray<Point> generate_points(T x_start, T x_end, T distance);
 
   void print_polynomial();
 private:
@@ -51,7 +53,11 @@ struct Point {
 - `generate_points(int x_start, int x_end, T difference)` - пресмята точките `x_start`, `x_start + difference`, `x_start + 2*difference`  и така докато тази стойност не надвиши `x_end` като ги записва в динамичен масив от точки който е резултатът от изпълнение на функцията.
 - `operator+` - събира два полинома, по типичният начин за събиране на полиноми
 - `operator-` - изважда два полинома, по типичният начин за изваждане на полиноми
+- `operator*` - умножава два полинома, по типичният начин за изваждане на полиноми
 - `print_polynomial()` - принтира на конзолата полиномът във вид 
+
+![product](images/product.png)
+
 
 ![Version-1](images/print-v1.png)
 
@@ -71,7 +77,7 @@ void print_point(Point<T>& p) {
   cout << '(' << p.x << ',' << ' ' << p.y << ')' << '\n';
 }
 ```
-А за множеството точки в интервал (предпоалга се че са сортирани, тъй като интервалът се обхожда в нарастващ ред)
+А за множеството точки в интервал (предполага се че са сортирани, тъй като интервалът се обхожда в нарастващ ред)
 ```c++  
 template <class T>
 void print_points(DynamicArray<Point<T>>& points) {
