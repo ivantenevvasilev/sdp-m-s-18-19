@@ -17,20 +17,25 @@ class Console {
 public:
    Console();
    Console(int character_limit_per_line);
+   Console(int character_limit_per_line, char fill);
 
    void append(char element);
    void append(const char * element);
    void append(int element);
-   void append(long element);
-   void append(double element);
    
    void print_characters(int character_count);
    void print_lines(int line_count);
    void print();
 
+   void align_left();
+   void align_right();
+
    void clear();
    void clear(int character_count);
    
+   void set_fill(char fill);
+   char get_fill() const;
+
    int get_line_limit() const;
    void set_line_limit(int character_limit);
 
@@ -45,12 +50,14 @@ public:
 - `print()` принтира целият буфер на екрана, като на даден ред не принтира повче от стойността на `get_line_limit()` знака на всеки ред. При достигане на тази бройка просто продължава принтирането на следващият ред. Като приключи изпълнението буферът трябва да е празен.
 - `print_characters(int character_count)` - принтира `character_count` на брой знака от буфера, като при повече от `get_line_limit()` знака на текущият ред минава на следващият.
 - `print_lines(int line_count)` принтира докато не мине завърши `line_count`ият ред.
-- `append(T element)` добавя елементът като поредица от символи накрая (повече информация за какво да прави append, ще обсъдим по-долу) - където `T` е един от следните типове: `long`, `int`, `char`, `const char *`, за `double` кодът е предоставен по-долу
+- `append(T element)` добавя елементът като поредица от символи накрая (повече информация за какво да прави append, ще обсъдим по-долу) - където `T` е един от следните типове: `int`, `char`, `const char *`.
 - `set_line_limit(int character_limit)` променя максималният брой на символи на даден ред (ествствено `character_limit` се предполага че е по-голямо от 0).
 - `get_buffer_size()` - връща броят на знаци които предстоят да бъдат принтирани.
-
-## Примери
-
+- `align_left()` - това е режимът по подразбиране, текстът се принтира нормално, започвайки от началото на редът стигайки до краят. Ако е в режим ляво подравняване и тази функция бъде извикана си остава непроменен. Ако се срещне знак за нов ред преди `line_limit` знака, принтира знакът `fill` до краят на редът.
+- `align_right()` - променя режимът в дясно подравняване, ако редът свърши преди `line_limit` на брой знаци, то в началото се слагат `line_limit - n` `setfill` знака където `n` е броят принтирани на редът.
+- `set_fill(char fill)` - слага знакът за запълване от до краят на новият ред (или от началото, зависи от подравнеността) на `fill`, по подразбиране ако не е подаден `fill` на конструктора е знакът за празно място `' '` 
+# Примери
+## За ляво подравняване (`left_align()`)
 ### Пример 1
 
 Съдържание на буфера:
